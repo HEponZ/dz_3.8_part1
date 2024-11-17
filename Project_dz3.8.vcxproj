@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Functions.cpp" />
     <ClCompile Include="Overcoat.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
