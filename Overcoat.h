@@ -12,6 +12,7 @@ public:
 	Overcoat() : Overcoat(nullptr, 0) {};
 	Overcoat(char* type_S, int price_S);
 
+	// аксессоры
 	const char* get_type() const
 	{
 		return  type;
@@ -21,6 +22,7 @@ public:
 		return price;
 	}
 
+	// модификаторы
 	void set_type(const char* type_S)
 	{
 		if (type)

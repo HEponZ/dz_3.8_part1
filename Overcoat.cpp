@@ -2,11 +2,13 @@
 
 Overcoat& Overcoat::operator=(const Overcoat& overcoat)
 {
+	// проверка не равны ли уже обьекты
 	if (this == &overcoat)
 	{
 		return *this;
 	}
 
+	// присваивание значений одного обьекта другому
 	this->set_type(overcoat.get_type());
 	this->set_price(overcoat.get_price());
 
