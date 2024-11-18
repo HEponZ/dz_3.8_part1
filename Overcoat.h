@@ -10,7 +10,7 @@ private:
 	int price;
 public:
 	Overcoat() : Overcoat(nullptr, 0) {};
-	Overcoat(char* type_S, int price_S);
+	Overcoat(const char* type_S, int price_S);
 
 	// аксессоры
 	const char* get_type() const
@@ -23,15 +23,7 @@ public:
 	}
 
 	// модификаторы
-	void set_type(const char* type_S)
-	{
-		if (type)
-		{
-			delete[] type;
-		}
-		type = new char[strlen(type_S) + 1];
-		strcpy_s(type, strlen(type_S) + 1, type_S);
-	}
+	void set_type(const char* type_S);
 	void set_price(const int price_S)
 	{
 		price = price_S;
@@ -41,4 +33,5 @@ public:
 
 	friend bool operator==(const Overcoat& over1, const Overcoat& over2);
 	friend bool operator>(const Overcoat& over1, const Overcoat& over2);
+	friend bool operator<(const Overcoat& over1, const Overcoat& over2);
 };

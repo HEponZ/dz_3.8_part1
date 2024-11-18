@@ -17,20 +17,21 @@ bool operator>(const Overcoat& over1, const Overcoat& over2)
 	{
 		if (over1.price > over2.price)
 		{
-			cout << "Цена первой одежды больше, чем цена второй\n";
-			return 1;
-		}
-		else if (over2.price > over1.price)
-		{
-			cout << "Цена второй одежды больше, чем цена первой\n";
-			return 1;
-		}
-		else
-		{
-			cout << "Цены равны\n";
-			return 1;
+			return true;
 		}
 	}
-	cout << "Типы не равны\n";
-	return 0;
+	return false;
+}
+
+bool operator<(const Overcoat& over1, const Overcoat& over2)
+{
+	// проверка на равность типов
+	if (over1 == over2)
+	{
+		if (over1.price < over2.price)
+		{
+			return true;
+		}
+	}
+	return false;
 }

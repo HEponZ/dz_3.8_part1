@@ -54,7 +54,18 @@ int main()
 			over = over2;
 			break;
 		case COMPARE_PRICE:
-			over > over2;
+			if (over > over2)
+			{
+				cout << "Цена первой одежды больше, чем цена второй\n";
+			}
+			else if (over < over2)
+			{
+				cout << "Цена второй одежды больше, чем цена первой\n";
+			}
+			else
+			{
+				cout << "Цены равны или типы разные\n";
+			}
 			break;
 		case PRINT:
 			printf("Тип №1 - %s\nЦена - %d$\nТип №2 - %s\nЦена - %d$\n", over.get_type(), over.get_price(), over2.get_type(), over2.get_price());
